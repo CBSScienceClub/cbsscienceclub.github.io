@@ -44,10 +44,3 @@ $on-laptop:        800px !default;
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
 }
-
-@import
-  "assets/css/minima/base",
-  "assets/css/bootstrap/bootstrap",
-  "assets/css/minima/layout",
-  "assets/css/minima/syntax-highlighting"
-;
