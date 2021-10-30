@@ -1,55 +1,217 @@
 ---
 layout: default
 ---
-{% for item in site.data.home.banner %} {%if item.active == true %}
-<div class="text-middle container-fluid announcement px-2 mx-3 me-3 rounded-1 text-dark" style="background-color: #20c997 ;">
-  <p class="display-6" id="bannertext"> {{item.text}} <a href='{% for post in site.posts limit:1 %} {{ post.url }} {% endfor %}'> here! </a></p>
+<div id="banner">
+  {% for item in site.data.home.banner %}
+  {%if item.active == true %}
+  <div class="text-middle container-fluid announcement p-2  rounded-1 text-dark mb-3" style="background-color: #20c997 ;">
+    <p class="display-6 m-0" id="bannertext"> {{item.text}} <a href='{% for post in site.posts limit:1 %} {{ post.url }} {% endfor %}'> here! </a></p>
+  </div>
+  {% endif %}
+  {% endfor %}
 </div>
-{% endif %} {% endfor %} {% for item in site.data.home.upcoming %} {%if item.active == true %}
-<div class="container">
-  <div class="future display-5 row">
-    <h3 style=" font-size: 1.25em; color: black;">Upcoming session</h3>
-    <div class="col-5">
-      {%if item.iframeactive == true %}
-      <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.zero.iframe }}?modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen style="float: left; padding-right: 15px;"></iframe>
-      {% endif %}
-    </div>
-    <div class="col-7">
-      <div>
-        <h2 style="margin-bottom: 10px;">{{ site.data.home.zero.h2 }}</h2>
-        <h3> {{ site.data.home.zero.h3 }} </h3>
+
+<div id="upcoming">
+  {% for item in site.data.home.upcoming %}
+  {%if item.active == true %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="display-6 m-0 py-0 px-3">
+      <h3 style="font-size: 0.8em; font-weight: 400; color: black;">Upcoming session</h3>
+      </div>
+      <div class="col-md p-3" style="min-height: 300px;">
+        {%if item.iframeactive == true %}
+          <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.zero.iframe }}?modestbranding=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen style="float: left;"></iframe>
+        {% endif %}
+      </div>
+      <div class="col-md p-3">
+        <div>
+          <h4 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.zero.t1 }}</h4>
+          <h5> {{ site.data.home.zero.t2 }} </h5>
+        </div>
       </div>
     </div>
-    </div>
+  </div>
+  <hr style="margin-bottom: 30px; margin-top: 40px;">
+  {% endif %}
+  {% endfor %}
 </div>
-<hr style="margin-bottom: 40px;"> {% endif %} {% endfor %}
-<div class="recentevents">
-  <h3 style=" font-size: 2.25em; color: black;">Recent Events </h3> {%- if site.data.home.recent_eventno >= 1 -%}
-  <div class="r-event">
-    <iframe width="325" height="215" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.one.iframe }}?modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen style="float: left; padding-right: 15px;"></iframe>
-    <div>
-      <h2 style="margin-bottom: 10px;">{{ site.data.home.one.h2 }}</h2>
-      <h3> {{ site.data.home.one.h3 }} </h3>
+
+<div id="recentevents">
+  <div class="display-6 m-0 py-0 px-3">
+    <h3 style=" font-size: 0.8em; font-weight: 400; color: black;">Recent Events </h3>
+  </div>
+  {%- if site.data.home.recent_eventno >= 1 -%}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md p-3" style="min-height: 300px;">
+        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.one.iframe }}?modestbranding=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen style="float: left;"></iframe>
+      </div>
+      <div class="col-md p-3">
+        <div>
+          <h4 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.one.t1 }}</h4>
+          <h5> {{ site.data.home.one.t2 }} </h5>
+        </div>
+      </div>
     </div>
   </div>
-  {%- endif -%} {%- if site.data.home.recent_eventno >= 2 -%}
+  {%- endif -%}
+  {%- if site.data.home.recent_eventno >= 2 -%}
   <hr style="margin:15px;">
-  <div class="r-event">
-    <iframe width="325" height="215" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.two.iframe }}?modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen style="float: left; padding-right: 15px;"></iframe>
-    <h2>{{ site.data.home.two.h2 }}</h2>
-    <h3>{{ site.data.home.two.h3 }}</h3>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md p-3" style="min-height: 300px;">
+        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.two.iframe }}?modestbranding=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen style="float: left;"></iframe>
+      </div>
+      <div class="col-md p-3">
+        <div>
+          <h4 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.two.t1 }}</h4>
+          <h5> {{ site.data.home.two.t2 }} </h5>
+        </div>
+      </div>
+    </div>
   </div>
-  {%- endif -%} {%- if site.data.home.recent_eventno == 3 -%}
+  {%- endif -%}
+  {%- if site.data.home.recent_eventno == 3 -%}
   <hr style="margin:15px;">
-  <div class="r-event">
-    <iframe width="325" height="215" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.three.iframe }}?modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen style="float: left; padding-right: 15px;"></iframe>
-    <h2>{{ site.data.home.three.h2 }}</h2>
-    <h3>{{ site.data.home.three.h3 }}</h3>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md p-3" style="min-height: 300px;">
+        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.three.iframe }}?modestbranding=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen style="float: left;"></iframe>
+      </div>
+      <div class="col-md p-3">
+        <div>
+          <h4 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.three.t1 }}</h4>
+          <h5> {{ site.data.home.three.t2 }} </h5>
+        </div>
+      </div>
+    </div>
   </div>
   {%- endif -%}
 
+  <hr style="margin:15px;">
+</div>
+
+<div id="typesofevents" class="carousel slide" data-bs-ride="carousel" style="background-color: white; border-radius: 10px;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#typesofevents" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#typesofevents" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#typesofevents" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#typesofevents" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row mb-4">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4 p-3">
+          <img src="/assets/img/about/rendezvous.jpg" class="d-block mx-auto mt-4" style="max-height: 400px;" alt="...">
+        </div>
+        <div class="col-md-4 p-3">
+          <div style="width: 95%; height: 440px;">
+            <h2 style="margin-bottom: 10px; font-weight: 700; padding-top: 20px;">Rendezvous</h2>
+            <h5 style="  text-align: justify; text-justify: inter-word;">In these sessions we invite researchers and host a lively dialogue of students with them. The conversation often begins around a central scientific theme in an informal and comfortable setting. We facilitate and encourage students to ask questions, which bring out more elaborate perspectives from the discussion. </h5>
+          </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row mb-4">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4 p-3">
+          <img src="/assets/img/about/interactive_session.jpg" class="d-block mx-auto mt-4" style="max-height: 400px;" alt="...">
+        </div>
+        <div class="col-md-4 p-3">
+          <div style="width: 95%; height: 440px;">
+            <h2 style="margin-bottom: 10px; font-weight: 700; padding-top: 20px;">Interaction</h2>
+            <h5 style="  text-align: justify; text-justify: inter-word;">Here we invite researchers and have free-flowing conversations with them on a variety of topics. For example, we try to understand the problems certain sections of our society are facing and how we can try to solve them. We also talk about their impressions and experiences throughout their journey in academia. </h5>
+          </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row mb-4">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4 p-3">
+          <img src="/assets/img/about/counselling.png" class="d-block mx-auto mt-4" style="max-height: 400px;" alt="...">
+        </div>
+        <div class="col-md-4 p-3">
+          <div style="width: 95%; height: 440px;">
+            <h2 style="margin-bottom: 10px; font-weight: 700; padding-top: 20px;">Counselling</h2>
+            <h5 style="  text-align: justify; text-justify: inter-word;">In these sessions we invite some of our professors and students to talk about the various opportunities presented by the institute, and how the students can best utilize them. In other such sessions with our alumni we also discuss the life ahead of our Integrated MSc program. </h5>
+          </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row mb-4">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4 p-3">
+          <img src="/assets/img/about/open_mic.jpg" class="d-block mx-auto mt-4" style="max-height: 400px;" alt="...">
+        </div>
+        <div class="col-md-4 p-3">
+          <div style="width: 95%; height: 440px;">
+            <h2 style="margin-bottom: 10px; font-weight: 700; padding-top: 20px;">Open Mic</h2>
+            <h5 style="font-size: 1.25em; text-align: justify; text-justify: inter-word;">Open Mics provide students with an opportunity to explore their scientific interests and share them with the community. The session begins with 5-6 students briefly introducing a topic of their interest. This is followed by a discussion session, where the speakers elaborate on their topic with smaller groups of students in greater depth. </h5><br>
+          </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#typesofevents" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#typesofevents" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  <hr style="margin:15px;">
+</div>
+
+<div id="about">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md p-3" style="min-height: 300px; text-align:center;">
+        <img class='my-3' style="height: 100%; max-height: 300px;" src="/assets/img/about/about_cbs.jpeg" alt="about cbs" >
+      </div>
+      <div class="col-md p-3">
+        <div>
+          <h4 style="margin-bottom: 10px; font-weight: 500;">About CEBS</h4>
+          <p style="text-align: justify; font-size: 0.98em;"> The Centre for Excellence in Basic Sciences (CEBS) is a joint academic venture of the University of Mumbai (UM) and the Department of Atomic Energy (DAE), Government of India. The institute primarily offers 5-year integrated MSc courses in four streams of basic sciences, namely Physics, Chemistry, Biology and Mathematics. <br> Students join the centre through the National Entrance Screening Test (NEST) after completing 10+2 or equivalent level of schooling. All four subjects are taught in the first year, and students can opt the stream of their choice second year onwards. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr style="margin:15px;">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md p-3" style="min-height: 300px; text-align:center;">
+        <img class='my-2' style="height: 100%;  max-height: 250px;" src="/assets/img/about/about_clubs.jpeg" alt="about the club" >
+      </div>
+      <div class="col-md p-3">
+        <div>
+          <h4 style="margin-bottom: 10px; font-weight: 500;">About the Club</h4>
+          <p style="text-align: justify;">We are a team of student volunteers from different years and streams, and take an active part in building a safe and inquisitive environment at the institute. Through our sessions we also wish to motivate independent pursuit of knowledge, and strengthen the relationship of the community with the world of research.<br><br> Read more in our <a href="/blog">blog</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
