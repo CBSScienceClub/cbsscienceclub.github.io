@@ -98,5 +98,5 @@ plugins:
 
 # added bootstrap commands
 sass:
-  sass_dir: assets
+  sass_dir: assets/
   style: compressed
