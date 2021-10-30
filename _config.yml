@@ -97,4 +97,4 @@ plugins:
 #   - vendor/ruby/
 # added bootstrap commands
 sass:
-  sass_dir: assets/css/
+  sass_dir: assets
