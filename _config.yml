@@ -98,5 +98,5 @@ plugins:
 
 # added bootstrap commands
 sass:
-  load_paths::
+  load_paths:
     - assets
