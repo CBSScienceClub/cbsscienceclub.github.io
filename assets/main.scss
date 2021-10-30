@@ -44,6 +44,7 @@ $on-laptop:        800px !default;
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
 }
+<<<<<<< HEAD
 
 @import
   "assets/css/minima/base",
@@ -51,3 +52,5 @@ $on-laptop:        800px !default;
   "assets/css/minima/layout",
   "assets/css/minima/syntax-highlighting"
 ;
+=======
+>>>>>>> 26e75106dd98c8ce0b591b0c6863de6174b0abb9
