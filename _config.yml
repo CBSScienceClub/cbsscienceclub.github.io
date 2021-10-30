@@ -95,8 +95,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-# added bootstrap commands
-sass:
-  sass_dir: assets/
-  style: compressed
