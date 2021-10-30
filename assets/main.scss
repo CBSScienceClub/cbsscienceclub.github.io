@@ -46,8 +46,8 @@ $on-laptop:        800px !default;
 }
 
 @import
-  "base.scss",
-  "bootstrap.scss",
-  "layout.scss",
-  "syntax-highlighting.scss"
+  "{{ 'assets/css/minima/base' | url }}",
+  "assets/css/bootstrap/bootstrap",
+  "assets/css/minima/layout",
+  "assets/css/minima/syntax-highlighting"
 ;
