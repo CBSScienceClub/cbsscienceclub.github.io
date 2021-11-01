@@ -1,6 +1,8 @@
 ---
 ---
-@charset "utf-8";
+.none {
+  height: 0px;
+}
 
 // Define defaults for each variable.
 
@@ -45,9 +47,4 @@ $on-laptop:        800px !default;
   font-size: $base-font-size * $ratio;
 }
 
-@import
-  "{{ 'assets/css/minima/base' | url }}",
-  "assets/css/bootstrap/bootstrap",
-  "assets/css/minima/layout",
-  "assets/css/minima/syntax-highlighting"
-;
+@import "assets/css/bootstrap/*";
