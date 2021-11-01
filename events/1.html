@@ -1,65 +1,26 @@
 ---
 layout: default
 ---
-<style media="screen">
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1.5fr 2fr;
-  grid-gap: 30px;
-  padding: 10px;
-}
-
-.grid-container > div {
-  text-align: justify;
-  padding: 20px 0;
-}
-
-.button {
-  background-color: black; /* Green */
-  border: white solid 1px;
-  border-radius: 8px;
-  color: white;
-  padding: 15px 32px;
-  margin-bottom: 20px;
-  margin-top: 5px;
-  text-align: center;
-  text-decoration: none;
-  transition-duration: 0.4s;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-}
-.button:hover {
-  background-color: white; /* Green */
-  border: red solid 1px;
-  color: black;
-}
-
-#written {
-  height: 420px;
-  overflow: scroll;
-  margin-right: 20px;
-}
-</style>
 <body>
-<div class="grid-container">
+<div class="container">
+  <div class="row">
 
+    <div class="col-lg" style="margin: 10px;">
+    <img src="/assets/img/event_posters/harrygray.png" , width="100%">
+    </div>
 
-<div class="poster" style="margin: 10px;">
-<img src="/assets/img/event_posters/harrygray.png" , width="100%">
-</div>
-
-<div class="main content" >
-
-  <button class="button" onclick="abstract()" >Abstract</button>
-  <button class="button" onclick="about()">About speaker</button>
-
-<div id="written">The dianionic oxo ligand occupies a very special place in coordination chemistry, owing to its ability to donate pi electrons to stabilize high oxidation states of metals. The ligand field theory of multiple bonding in metal-oxos predicts that there must be an “oxo wall” between Fe-Ru-Os and Co-Rh-Ir in the periodic table. Metal-oxos on the left side of the wall are reactive intermediates in three of the most important chemical reactions on planet Earth: water oxidation to oxygen in photosystem II; oxygen reduction to water in the terminal enzyme of the respiratory chain (cytochrome oxidase); and hydrocarbon oxygenation catalyzed by cytochrome P450. As many high-valent metal-oxos are very powerful oxidants, we might expect that living cells full of organic molecules would suffer from oxidative destruction. The question is: how are oxidative enzymes protected? Jay Winkler and I have suggested that an uncoupled high-valent iron-oxo intermediate would be reduced by hole transfer to a tryptophan or tyrosine residue in a Trp/Tyr chain extending from the active site to the enzyme surface. Electron transfer to the terminal residue in the chain could then protect the enzyme from oxidative degradation.
-</div>
-
-</div>
-
+    <div class="col-lg" >
+      <div class="btn-group btn-group-lg my-3" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-outline-primary" onclick="abstract()" >Abstract</button>
+        <button type="button" class="btn btn-outline-primary" onclick="about()">About speaker</button>
+      </div>
+      <div class="d-inline-flex" id="written">The dianionic oxo ligand occupies a very special place in coordination chemistry, owing to its ability to donate pi electrons to stabilize high oxidation states of metals. The ligand field theory of multiple bonding in metal-oxos predicts that there must be an “oxo wall” between Fe-Ru-Os and Co-Rh-Ir in the periodic table. Metal-oxos on the left side of the wall are reactive intermediates in three of the most important chemical reactions on planet Earth: water oxidation to oxygen in photosystem II; oxygen reduction to water in the terminal enzyme of the respiratory chain (cytochrome oxidase); and hydrocarbon oxygenation catalyzed by cytochrome P450. As many high-valent metal-oxos are very powerful oxidants, we might expect that living cells full of organic molecules would suffer from oxidative destruction. The question is: how are oxidative enzymes protected? Jay Winkler and I have suggested that an uncoupled high-valent iron-oxo intermediate would be reduced by hole transfer to a tryptophan or tyrosine residue in a Trp/Tyr chain extending from the active site to the enzyme surface. Electron transfer to the terminal residue in the chain could then protect the enzyme from oxidative degradation.
+      </div>  
+    </div>
+    
+    </div>
+  </div>
 </div>
 <script>
 function abstract() {

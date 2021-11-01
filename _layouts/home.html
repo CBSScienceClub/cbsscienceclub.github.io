@@ -2,7 +2,6 @@
 layout: default
 ---
 
-<p>{{ 'assets/css/minima/base' | url }}</p>
 <div id="banner">
   {% for item in site.data.home.banner %}
   {%if item.active == true %}
@@ -40,63 +39,25 @@ layout: default
   {% endfor %}
 </div>
 
-<div id="recentevents">
-  <div class="display-6 m-0 py-0 px-3">
-    <h3 style=" font-size: 0.8em; font-weight: 400; color: black;">Recent Events </h3>
-  </div>
-  {%- if site.data.home.recent_eventno >= 1 -%}
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md p-3" style="min-height: 300px;">
-        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.one.iframe }}?modestbranding=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen style="float: left;"></iframe>
-      </div>
-      <div class="col-md p-3">
-        <div>
-          <h4 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.one.t1 }}</h4>
-          <h5> {{ site.data.home.one.t2 }} </h5>
-        </div>
-      </div>
-    </div>
-  </div>
-  {%- endif -%}
-  {%- if site.data.home.recent_eventno >= 2 -%}
-  <hr style="margin:15px;">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md p-3" style="min-height: 300px;">
-        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.two.iframe }}?modestbranding=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen style="float: left;"></iframe>
-      </div>
-      <div class="col-md p-3">
-        <div>
-          <h4 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.two.t1 }}</h4>
-          <h5> {{ site.data.home.two.t2 }} </h5>
-        </div>
-      </div>
-    </div>
-  </div>
-  {%- endif -%}
-  {%- if site.data.home.recent_eventno == 3 -%}
-  <hr style="margin:15px;">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md p-3" style="min-height: 300px;">
-        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.three.iframe }}?modestbranding=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen style="float: left;"></iframe>
-      </div>
-      <div class="col-md p-3">
-        <div>
-          <h4 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.three.t1 }}</h4>
-          <h5> {{ site.data.home.three.t2 }} </h5>
-        </div>
-      </div>
-    </div>
-  </div>
-  {%- endif -%}
+<div class="our team">
 
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md p-3" style="min-height: 300px; text-align:center;">
+        <img class='my-1' style="height: 100%;  max-height: 250px;" src="/assets/img/about/about_clubs.jpeg" alt="about the club" >
+      </div>
+      <div class="col-md p-3">
+        <div>
+          <h4 style="margin-bottom: 10px; font-weight: 500;">Our Team</h4>
+          <p style="text-align: justify;">We are a group of student volunteers coming from different years and streams at UM-DAE CEBS. Through our events we try to encourage independent pursuit of knowledge among students, and strengthen the relationship of the community with the world of research.<br><br> Read more in our <a href="/blog">blog</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <hr style="margin:15px;">
+
 </div>
+
 
 <div id="typesofevents" class="carousel slide" data-bs-ride="carousel" style="background-color: white; border-radius: 10px;">
   <div class="carousel-indicators">
@@ -186,7 +147,66 @@ layout: default
   <hr style="margin:15px;">
 </div>
 
-<div id="about">
+
+<div id="recentevents">
+  <div class="display-6 m-0 py-0 px-3">
+    <h3 style=" font-size: 0.8em; font-weight: 400; color: black;">Recent Events </h3>
+  </div>
+  {%- if site.data.home.recent_eventno >= 1 -%}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md p-3" style="min-height: 300px;">
+        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.one.iframe }}?modestbranding=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen style="float: left;"></iframe>
+      </div>
+      <div class="col-md p-3">
+        <div>
+          <h4 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.one.t1 }}</h4>
+          <h5> {{ site.data.home.one.t2 }} </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%- endif -%}
+  {%- if site.data.home.recent_eventno >= 2 -%}
+  <hr style="margin:15px;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md p-3" style="min-height: 300px;">
+        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.two.iframe }}?modestbranding=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen style="float: left;"></iframe>
+      </div>
+      <div class="col-md p-3">
+        <div>
+          <h4 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.two.t1 }}</h4>
+          <h5> {{ site.data.home.two.t2 }} </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%- endif -%}
+  {%- if site.data.home.recent_eventno == 3 -%}
+  <hr style="margin:15px;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md p-3" style="min-height: 300px;">
+        <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.three.iframe }}?modestbranding=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen style="float: left;"></iframe>
+      </div>
+      <div class="col-md p-3">
+        <div>
+          <h4 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.three.t1 }}</h4>
+          <h5> {{ site.data.home.three.t2 }} </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%- endif -%}
+
+  <hr style="margin:15px;">
+</div>
+
+<div id="about CEBS">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md p-3" style="min-height: 300px; text-align:center;">
@@ -203,17 +223,5 @@ layout: default
 
   <hr style="margin:15px;">
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md p-3" style="min-height: 300px; text-align:center;">
-        <img class='my-2' style="height: 100%;  max-height: 250px;" src="/assets/img/about/about_clubs.jpeg" alt="about the club" >
-      </div>
-      <div class="col-md p-3">
-        <div>
-          <h4 style="margin-bottom: 10px; font-weight: 500;">About the Club</h4>
-          <p style="text-align: justify;">We are a team of student volunteers from different years and streams, and take an active part in building a safe and inquisitive environment at the institute. Through our sessions we also wish to motivate independent pursuit of knowledge, and strengthen the relationship of the community with the world of research.<br><br> Read more in our <a href="/blog">blog</a>.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </div>
