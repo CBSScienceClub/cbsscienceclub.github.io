@@ -47,4 +47,7 @@ $on-laptop:        800px !default;
   font-size: $base-font-size * $ratio;
 }
 
-@import "assets/css/bootstrap/*";
+@import "assets/css/bootstrap/base";
+@import "assets/css/bootstrap/bootstrap";
+@import "assets/css/bootstrap/layout";
+@import "assets/css/bootstrap/syntax-highlighting;
