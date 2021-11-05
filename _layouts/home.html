@@ -5,7 +5,7 @@ layout: default
 <div id="banner">
   {% for item in site.data.home.banner %}
   {%if item.active == true %}
-  <div class="text-middle container-fluid announcement p-2  rounded-1 text-dark mb-3" style="background-color: #20c997 ;">
+  <div class="text-middle container-fluid announcement p-2  rounded-1 text-dark mb-3" style="background-color: #20c958 ;">
     <p class="display-6 m-0" id="bannertext"> {{item.text}} <a href='{% for post in site.posts limit:1 %} {{ post.url }} {% endfor %}'> here! </a></p>
   </div>
   {% endif %}
@@ -48,8 +48,8 @@ layout: default
       </div>
       <div class="col-md p-3">
         <div>
-          <h4 style="margin-bottom: 10px; font-weight: 500;">Our Team</h4>
-          <p style="text-align: justify;">We are a group of student volunteers coming from different years and streams at UM-DAE CEBS. Through our events we try to encourage independent pursuit of knowledge among students, and strengthen the relationship of the community with the world of research.<br><br> Read more in our <a href="/blog">blog</a>.</p>
+          <h4 style="margin-bottom: 10px; font-weight: 500;">About us</h4>
+          <p style="text-align: justify;">We are a group of student coming from various years and streams at UM-DAE CEBS. Through our events we try to encourage independent pursuit of knowledge among students, and strengthen the relationship of the community with the world of research.<br><br> Read more in our <a href="/blog">blog</a>.</p>
         </div>
       </div>
     </div>
@@ -60,6 +60,9 @@ layout: default
 
 
 <div id="typesofevents" class="carousel slide" data-bs-ride="carousel" style="background-color: white; border-radius: 10px;">
+  <div class="display-6 mt-4 py-0 px-3 ">
+    <h3 style=" font-size: 0.8em; font-weight: 500; color: black; text-align: center;">Our Events </h3>
+  </div>
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#typesofevents" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#typesofevents" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -77,7 +80,7 @@ layout: default
         <div class="col-md-4 p-3">
           <div style="width: 95%; height: 440px;">
             <h2 style="margin-bottom: 10px; font-weight: 700; padding-top: 20px;">Rendezvous</h2>
-            <h5 style="  text-align: justify; text-justify: inter-word;">In these sessions we invite researchers and host a lively dialogue of students with them. The conversation often begins around a central scientific theme in an informal and comfortable setting. We facilitate and encourage students to ask questions, which bring out more elaborate perspectives from the discussion. </h5>
+            <h5 style="  text-align: justify; text-justify: inter-word;">In these sessions we invite researchers and host a lively dialogue between students and the speakers. The conversation often begins around a central scientific theme in an informal and comfortable setting. We encourage students to ask questions, which bring out more elaborate perspectives from the discussion. </h5>
           </div>
         </div>
         <div class="col-md-2">
@@ -110,7 +113,7 @@ layout: default
         </div>
         <div class="col-md-4 p-3">
           <div style="width: 95%; height: 440px;">
-            <h2 style="margin-bottom: 10px; font-weight: 700; padding-top: 20px;">Counselling</h2>
+            <h2 style="margin-bottom: 10px; font-weight: 700; padding-top: 20px;">Counselling sessions</h2>
             <h5 style="  text-align: justify; text-justify: inter-word;">In these sessions we invite some of our professors and students to talk about the various opportunities presented by the institute, and how the students can best utilize them. In other such sessions with our alumni we also discuss the life ahead of our Integrated MSc program. </h5>
           </div>
         </div>
@@ -220,8 +223,6 @@ layout: default
       </div>
     </div>
   </div>
-
-  <hr style="margin:15px;">
 
 
 </div>
