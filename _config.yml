@@ -22,7 +22,7 @@ title: CBS Science Club
 author:
   name: CBS Science Club
   email: science.club@cbs.ac.in
-description:  Built using Jekyll, Github Pages and Bootstrap
+# description:  Built using Jekyll, Github Pages and Bootstrap
 
 
 show_excerpts: false # set to true to show excerpts on the homepage
