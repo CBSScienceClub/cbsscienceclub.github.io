@@ -98,3 +98,11 @@ plugins:
 
 sass:
   sass_dir: _sass
+
+
+#events collections added
+
+collections:
+  events:
+    output: true
+    permalink: /events/:path/
