@@ -3,7 +3,7 @@ banner:
   - active: true
     text: "Check out our new blog post  "
 upcoming:
-  - active: true
+  - active: false
     iframeactive: true
 recent_eventno: 2
 zero:
