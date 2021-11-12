@@ -75,7 +75,6 @@ This is indeed why we have a science club in a science institute. We wish to exp
 \
 \
 \
-\
 
 [^1]: How many essayists whose essays we read in textbooks wrote them for an exam?
 
