@@ -71,7 +71,11 @@ sound ‘essential’ to acknowledge and address these problems, we still wish t
 In Rendezvous, for instance, we invite researchers and students so that all of us can have free conversations centred around a particular scientific topic. When we invited Prof. Rama Govindarajan from ICTS, Bengaluru to speak with us, we talked about how we can try to predict the weather using computer simulations and equations, and then the discussion went around many adjacent questions. We wanted to get introduced to the field, understand what the real problems are, and how and to what extent people have tackled them. And whenever there was something that didn't fit someone's picture of the story, we tried to discuss that doubt (though certainly there would’ve been many loopholes in implementing our individual ideas). We wanted to have the session with her because at least some of us were curious to do so! Many things were unknown, both about organizing the session and the lessons each of us learnt from it. There's nothing that is absolutely correct here, every action or statement comes with its own uncertainties and possibilities of further exploration and discussion. And thus there’s no hurriedness of finishing it quickly and moving on to something else. On the other hand, we have already seen the problems when we falsely give people the notion of correct answers. It brings with it the notions of boredom of journey (and hence closing our eyes while travelling) and the hurriedness to reach *the* destination. 
 
 This is indeed why we have a science club in a science institute. We wish to explore our paths of learning and communicating science while feeling safe and enabled, and provide just that environment to others around us.
-
+\
+\
+\
+\
+\
 
 [^1]: How many essayists whose essays we read in textbooks wrote them for an exam?
 
