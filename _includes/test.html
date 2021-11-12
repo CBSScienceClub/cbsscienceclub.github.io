@@ -106,26 +106,36 @@
     margin: 1px;
   }
 </style>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+    <h1 class="page-heading">{{ page.title }}</h1>
+    </div>
+    <div class="col">
+    <input id="input" data-jplist-control="textbox-filter" data-group="data-group-1" data-path=".title" data-clear-btn-id="title-clear-btn" type="text" value="" placeholder="Search by Title" />
+    <button type="button" id="title-clear-btn">Clear</button>
+    </div>
+  </div> 
+</div>
 <div class="controls">
+
   <div>
   <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="0" data-selected="true">
     All
   </button>
   <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="0" data-to="2">
-    rendezvous
+    Rendezvous
   </button>
   <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="2" data-to="4">
-    open mic
+    Open Mic
   </button>
-  <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="4">
-    interaction session
+  <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="4" data-to="6">
+    Interaction session
   </button>
-</div>
-<div style="width: 360px;">
-  <input id="input" data-jplist-control="textbox-filter" data-group="data-group-1" data-path=".title" data-clear-btn-id="title-clear-btn" type="text" value="" placeholder="Filter by Title" />
-
-  <button type="button" id="title-clear-btn">Clear</button>
-</div>
+  <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="6" data-to="8">
+    Counselling
+  </button>
+  </div>
 </div>
 
 <!-- generated content -->

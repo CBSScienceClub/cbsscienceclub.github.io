@@ -1,0 +1,32 @@
+<body>
+  <div class="h1 ms-3">
+      {{ page.title_prefix }} {{ page.title }}
+  </div>
+  <div class="container">
+    <div class="row">
+  
+      <div class="" >
+        {% if page.button == true %}
+        <div class="btn-group btn-group-lg my-3">
+          <button type="button" class="btn btn-outline-primary" onclick="one()" >{{ page.button_1 }}</button>
+          <button type="button" class="btn btn-outline-primary" onclick="two()">{{ page.button_2 }}</button>
+        </div>
+        {% endif %}
+        <div class="d-inline-flex overflow-scroll" id="written" style="text-align: justify;">{{ page.written_1 }}
+        </div>  
+      </div>
+      
+      </div>
+  </div>
+  <script>
+  function one() {
+    var x = document.getElementById("written");
+    x.innerHTML = "{{ page.written_1 }}" ;
+  }
+  function two() {
+    var x = document.getElementById("written");
+    x.innerHTML = "{{ page.written_2 }}";
+  }
+  </script>
+  </body>
+  
