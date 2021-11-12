@@ -1,10 +1,10 @@
-- name: Home
+- name: "   Home"
   link: /
-- name: Events
+- name: "   Events"
   link: /events
-- name: Gallery
+- name: "   Gallery"
   link: /gallery
-- name: Blog
+- name: "   Blog"
   link: /blog
-- name: Contact
+- name: "   Contact"
   link: /contacts
