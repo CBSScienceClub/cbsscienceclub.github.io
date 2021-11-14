@@ -79,7 +79,8 @@ This is indeed why we have a science club in a science institute. We wish to exp
 <br>
 <br>
 
-[^1]: How many essayists whose essays we read in textbooks wrote them for an exam? And how many students who scored well scorers end up liking reading and writing essays?
+[^1]: How many essayists whose essays we read in textbooks wrote them for an exam? And how many students who score
+ well end up liking reading and writing essays?
 
 [^2]: Just like becoming multilingual to get a job isn’t inherently bad.
 
