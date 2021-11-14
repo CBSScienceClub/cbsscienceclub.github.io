@@ -5,8 +5,8 @@ layout: default
 <div id="banner">
   {% for item in site.data.home.banner %}
   {%if item.active == true %}
-  <div class="text-middle container-fluid announcement p-2  rounded-1 text-dark mb-3" style="background-color: #20c958 ;">
-    <p class="display-6 m-0" id="bannertext"> {{item.text}} <a href='{% for post in site.posts limit:1 %} {{ post.url }} {% endfor %}'> here! </a></p>
+  <div class="text-middle container-fluid announcement p-2  rounded-1 text-dark mb-3" style="background-color: #bffcc6 ;">
+    <p class="display-6 m-0" id="bannertext"> {{item.text}} <b><a href='{% for post in site.posts limit:1 %} {{ post.url }} {% endfor %}'> here! </a></b></p>
   </div>
   {% endif %}
   {% endfor %}
@@ -44,7 +44,7 @@ layout: default
   <div class="container-fluid">
     <div class="row">
       <div class="col-md p-3" style="min-height: 300px; text-align:center;">
-        <img class='my-1' style="height: 100%;  max-height: 250px;" src="/assets/img/about/about_clubs.jpeg" alt="about the club" >
+        <img class='my-1' style="height: 100%;  max-height: 250px;" src="/assets/img/about/about.jpg" alt="about the club" >
       </div>
       <div class="col-md p-3">
         <div>

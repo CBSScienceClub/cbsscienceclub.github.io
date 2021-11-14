@@ -56,14 +56,14 @@
     }
   }
   .grid_item:hover{
-    background-color: rgb(117, 234, 241);
+    background-color: rgba(117, 234, 241, 0.3);
     border: rgb(117, 234, 241) solid 1px;
   }
 
   button {
     background-color: #ffffff;
-    height: 38px;
-    border: none;
+    height: 45px;
+    border: solid black 0.5px;
     color: black;
     padding: 10px 12px;
     text-align: center;
@@ -72,12 +72,13 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 4px;
     transition-duration: 0.5s;
   }
 
   button:hover {
-    background-color: #7fe7e4;
+    background-color: RGBA(133, 227, 255, 0.4);
+
   }
 
   #page_control {
@@ -90,7 +91,7 @@
 
   #input {
     width: 70%;
-    height: 35px;
+    height: 45px;
     padding-left: 10px;
     margin: 4px;
     border: 1px solid #010101;
@@ -108,10 +109,10 @@
 </style>
 <div class="container-fluid">
   <div class="row">
-    <div class="col">
+    <div class="col-md">
     <h1 class="page-heading">{{ page.title }}</h1>
     </div>
-    <div class="col">
+    <div class="col-md align-items-center p-0">
     <input id="input" data-jplist-control="textbox-filter" data-group="data-group-1" data-path=".title" data-clear-btn-id="title-clear-btn" type="text" value="" placeholder="Search by Title" />
     <button type="button" id="title-clear-btn">Clear</button>
     </div>
@@ -135,13 +136,30 @@
   <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="6" data-to="8">
     Counselling
   </button>
+  <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="8" data-to="10">
+    Other
+  </button>
   </div>
 </div>
+
+
+
 
 <!-- generated content -->
 <div class="grid_container" data-jplist-group="data-group-1">
   {%- for item in site.events reversed -%}
-  <div class="grid_item"  data-jplist-item>
+  <div class="grid_item" style="
+  {% if item.type==1 %}
+  background-color: rgba(241, 117, 200, 0.2)
+  {% elsif item.type==3 %}
+  background-color: rgba(241, 231, 86, 0.2)
+  {% elsif item.type==5 %}
+  background-color: rgba(86, 241, 120, 0.2)
+  {% elsif item.type==7 %}
+  background-color: rgba(86, 210, 241, 0.2)
+  {% elsif item.type==9 %}
+  background-color: rgba(205, 86, 241, 0.2)
+  {% endif %};" data-jplist-item >
     <a href="{{item.url}}" class="glink" style="color: initial;">
       <div class="name" style="padding: 13px;"><strong style="font-size: 18px;">{{item.title_prefix}}</strong>
         <br />{{item.title}}</div>
@@ -172,12 +190,13 @@
       <!-- items per page select -->
     </div>
     <div style="text-align: center; font-size: 14px; margin: none; padding: none;">
-      <select data-type="items-per-page" style="width: 150px; height: 37px; padding-left: 10px; margin: 4px;">
+      <select data-type="items-per-page" style="width: 150px; height: 40px; padding-left: 10px; margin: 4px;">
         <option value="9"> 9 per page </option>
         <option value="15"> 15 per page </option>
         <option value="45"> 45 per page </option>
         <option value="0"> view all </option>
       </select>
+      <br>
       <span data-type="info">
         Page {pageNumber} of {pagesNumber} |
       </span>
