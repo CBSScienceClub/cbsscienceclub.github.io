@@ -6,7 +6,7 @@ layout: default
   {% for item in site.data.home.banner %}
   {%if item.active == true %}
   <div class="text-middle container-fluid announcement p-2  rounded-1 text-dark mb-3" style="background-color: #bffcc6 ;">
-    <p class="display-6 m-0" id="bannertext"> {{item.text}} <b><a href='{% for post in site.posts limit:1 %} {{ post.url }} {% endfor %}'> here! </a></b></p>
+    <p class="display-6 m-0" id="bannertext" style="text-align: center;"> {{item.text}} <b><a href='{% for post in site.posts limit:1 %} {{ post.url }} {% endfor %}'> here! </a></b></p>
   </div>
   {% endif %}
   {% endfor %}
@@ -18,7 +18,7 @@ layout: default
   <div class="container-fluid">
     <div class="row">
       <div class="display-6 m-0 py-0 px-3">
-      <h3 style="font-size: 0.8em; font-weight: 400; color: black;">Upcoming session</h3>
+      <h3 style=" font-size: 0.9em; font-weight: 500; color: black;">Upcoming session</h3>
       </div>
       <div class="col-md p-3" style="min-height: 300px;">
         {%if item.iframeactive == true %}
@@ -28,7 +28,7 @@ layout: default
       </div>
       <div class="col-md p-3">
         <div>
-          <h4 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.zero.t1 }}</h4>
+          <h3 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.zero.t1 }}</h3>
           <h5> {{ site.data.home.zero.t2 }} </h5>
         </div>
       </div>
@@ -44,11 +44,11 @@ layout: default
   <div class="container-fluid">
     <div class="row">
       <div class="col-md p-3" style="min-height: 300px; text-align:center;">
-        <img class='my-1' style="height: 100%;  max-height: 250px;" src="/assets/img/about/about.jpg" alt="about the club" >
+        <img class='my-2 p-3 pt-0' src="/assets/img/about/about.jpeg" alt="about the club" >
       </div>
       <div class="col-md p-3">
         <div>
-          <h4 style="margin-bottom: 10px; font-weight: 500;">About us</h4>
+          <h3 style="margin-bottom: 10px; font-weight: 500;">About us</h3>
           <p style="text-align: justify;">We are a group of student coming from various years and streams at UM-DAE CEBS. Through our events we try to encourage independent pursuit of knowledge among students, and strengthen the relationship of the community with the world of research.<br><br> Read more in our <a href="/blog">blog</a>.</p>
         </div>
       </div>
@@ -61,7 +61,7 @@ layout: default
 
 <div id="typesofevents" class="carousel slide" data-bs-ride="carousel" style="background-color: white; border-radius: 10px;">
   <div class="display-6 mt-4 py-0 px-3 ">
-    <h3 style=" font-size: 0.8em; font-weight: 500; color: black; text-align: center;">Our Events </h3>
+    <h3 style=" font-size: 0.9em; font-weight: 500; color: black; text-align: center;">Our Events </h3>
   </div>
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#typesofevents" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -79,7 +79,7 @@ layout: default
         </div>
         <div class="col-md-4 p-3">
           <div style="width: 95%; height: 440px;">
-            <h2 style="margin-bottom: 10px; font-weight: 700; padding-top: 20px;">Rendezvous</h2>
+            <h2 style="margin-bottom: 10px; font-weight: 500; padding-top: 20px;">Rendezvous</h2>
             <h5 style="  text-align: justify; text-justify: inter-word;">In these sessions we invite researchers and host a lively dialogue between students and the speakers. The conversation often begins around a central scientific theme in an informal and comfortable setting. We encourage students to ask questions, which bring out more elaborate perspectives from the discussion. </h5>
           </div>
         </div>
@@ -96,7 +96,7 @@ layout: default
         </div>
         <div class="col-md-4 p-3">
           <div style="width: 95%; height: 440px;">
-            <h2 style="margin-bottom: 10px; font-weight: 700; padding-top: 20px;">Interaction</h2>
+            <h2 style="margin-bottom: 10px; font-weight: 500; padding-top: 20px;">Interaction</h2>
             <h5 style="  text-align: justify; text-justify: inter-word;">Here we invite researchers and have free-flowing conversations with them on a variety of topics. For example, we try to understand the problems certain sections of our society are facing and how we can try to solve them. We also talk about their impressions and experiences throughout their journey in academia. </h5>
           </div>
         </div>
@@ -113,7 +113,7 @@ layout: default
         </div>
         <div class="col-md-4 p-3">
           <div style="width: 95%; height: 440px;">
-            <h2 style="margin-bottom: 10px; font-weight: 700; padding-top: 20px;">Counselling sessions</h2>
+            <h2 style="margin-bottom: 10px; font-weight: 500; padding-top: 20px;">Counselling sessions</h2>
             <h5 style="  text-align: justify; text-justify: inter-word;">In these sessions we invite some of our professors and students to talk about the various opportunities presented by the institute, and how the students can best utilize them. In other such sessions with our alumni we also discuss the life ahead of our Integrated MSc program. </h5>
           </div>
         </div>
@@ -130,7 +130,7 @@ layout: default
         </div>
         <div class="col-md-4 p-3">
           <div style="width: 95%; height: 440px;">
-            <h2 style="margin-bottom: 10px; font-weight: 700; padding-top: 20px;">Open Mic</h2>
+            <h2 style="margin-bottom: 10px; font-weight: 500; padding-top: 20px;">Open Mic</h2>
             <h5 style="font-size: 1.25em; text-align: justify; text-justify: inter-word;">Open Mics provide students with an opportunity to explore their scientific interests and share them with the community. The session begins with 5-6 students briefly introducing a topic of their interest. This is followed by a discussion session, where the speakers elaborate on their topic with smaller groups of students in greater depth. </h5><br>
           </div>
         </div>
@@ -153,7 +153,7 @@ layout: default
 
 <div id="recentevents">
   <div class="display-6 m-0 py-0 px-3">
-    <h3 style=" font-size: 0.8em; font-weight: 400; color: black;">Recent Events </h3>
+    <h3 style=" font-size: 0.9em; font-weight: 500; color: black;">Recent Events </h3>
   </div>
   {%- if site.data.home.recent_eventno >= 1 -%}
   <div class="container-fluid">
@@ -164,7 +164,7 @@ layout: default
       </div>
       <div class="col-md p-3">
         <div>
-          <h4 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.one.t1 }}</h4>
+          <h3 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.one.t1 }}</h3>
           <h5> {{ site.data.home.one.t2 }} </h5>
         </div>
       </div>
@@ -181,7 +181,7 @@ layout: default
       </div>
       <div class="col-md p-3">
         <div>
-          <h4 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.two.t1 }}</h4>
+          <h3 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.two.t1 }}</h3>
           <h5> {{ site.data.home.two.t2 }} </h5>
         </div>
       </div>
@@ -198,7 +198,7 @@ layout: default
       </div>
       <div class="col-md p-3">
         <div>
-          <h4 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.three.t1 }}</h4>
+          <h3 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.three.t1 }}</h3>
           <h5> {{ site.data.home.three.t2 }} </h5>
         </div>
       </div>
@@ -212,12 +212,12 @@ layout: default
 <div id="about CEBS">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md p-3" style="min-height: 300px; text-align:center;">
-        <img class='my-3' style="height: 100%; max-height: 300px;" src="/assets/img/about/about_cbs.jpeg" alt="about cbs" >
+      <div class="col-md-5" style="min-height: 300px; text-align:center;">
+        <img class='mt-4' style="height: 80%; max-height: 300px;" src="/assets/img/about/about_cbs.jpeg" alt="about cbs" >
       </div>
-      <div class="col-md p-3">
+      <div class="col-md-7 p-3">
         <div>
-          <h4 style="margin-bottom: 10px; font-weight: 500;">About CEBS</h4>
+          <h3 style="margin-bottom: 10px; font-weight: 500;">About CEBS</h3>
           <p style="text-align: justify; font-size: 0.98em;"> The Centre for Excellence in Basic Sciences (CEBS) is a joint academic venture of the University of Mumbai (UM) and the Department of Atomic Energy (DAE), Government of India. The institute primarily offers 5-year integrated MSc courses in four streams of basic sciences, namely Physics, Chemistry, Biology and Mathematics. <br> Students join the centre through the National Entrance Screening Test (NEST) after completing 10+2 or equivalent level of schooling. All four subjects are taught in the first year, and students can opt the stream of their choice second year onwards. </p>
         </div>
       </div>

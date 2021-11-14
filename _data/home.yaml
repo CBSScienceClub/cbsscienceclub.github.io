@@ -7,9 +7,9 @@ upcoming:
     iframeactive: true
 recent_eventno: 2
 zero:
- iframe: njS66--SHBE
- t1: "How to Get Away With Fission: <br> The Tale of Mitochondrial Division and Partitioning"
- t2: "Rendezvous with Dr. Vaishnavi Ananthanarayanan <br>EMBL Australia Group Leader, <br> Single Molecule Science, School of Medical Science,<br> University of New South Wales, Sydney "
+ iframe: 
+ t1: 
+ t2: 
 one:
  iframe: PMJtv_B2jKc
  t1: "How to Get Away With Fission: <br> The Tale of Mitochondrial Division and Partitioning"
@@ -19,6 +19,6 @@ two:
  t1: "My Random Walk in Science: <br> Nano Heat Engines, Earthquakes and Machine Learning"
  t2: " Rendezvous with Prof. Ajay K. Sood <br>Honorary Professor, Department of Physics,<br> IISc, Bengaluru "
 three:
- iframe: HRSCBJbfrfw
- t1: "Informal Interaction"
- t2: "with Dr. Abhijit Majumder <br>Associate Professor, IIT Bombay"
+ iframe: 
+ t1: 
+ t2: 
