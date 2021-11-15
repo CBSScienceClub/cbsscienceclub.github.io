@@ -10,10 +10,12 @@
       </div>
   
       <div class="" >
-        <div class="btn-group btn-group-lg my-3">
-          <button type="button" class="btn btn-outline-primary" onclick="one()" >{{ page.button_1 }}</button>
-          <button type="button" class="btn btn-outline-primary" onclick="two()">{{ page.button_2 }}</button>
-        </div>
+        {% if page.button == true %}
+          <div class="btn-group btn-group-lg my-3">
+            <button type="button" class="btn btn-outline-primary" onclick="one()" >{{ page.button_1 }}</button>
+            <button type="button" class="btn btn-outline-primary" onclick="two()">{{ page.button_2 }}</button>
+          </div>
+        {% endif %}
         <div class="d-inline-flex overflow-scroll" id="written" style="text-align: justify;  overflow-x: hidden;">{{ page.written_1 }}
         </div>  
       </div>
