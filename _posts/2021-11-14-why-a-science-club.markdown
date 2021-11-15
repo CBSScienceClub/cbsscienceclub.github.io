@@ -11,7 +11,7 @@ Before starting the discussion on the purpose of the club, let us tell you a lit
 
 However, each student is different and has their own set of experiences. Many incidents since their childhood have shaped their surroundings and outlook. Let us go beyond the standard facts and opportunities associated with the colleges (including CEBS), and instead look at these opportunities from the students’ point of view.
 
-## evaluation 
+## Evaluation 
 
 Before joining the institute the students have already seen the environment of the school (and often coaching classes). There, a lot of emphasis is given to solving questions to get the correct answer. Questions can serve as a great method to learn a concept, because then one can put together different ideas learnt in the chapter to find an answer. Many professors say that they ask their students to try solving as many questions as possible. So questions themselves may not be a problem. But our over-reliance on them to evaluate everyone can be a problem. We can see this in the case of language courses, where it is slightly more evident.
 
