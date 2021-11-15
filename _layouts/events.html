@@ -117,7 +117,7 @@ layout: default
       <h1 class="page-heading">{{ page.title }}</h1>
       </div>
       <div class="col-md align-items-center p-0">
-      <input id="input" data-jplist-control="textbox-filter" data-group="data-group-1" data-path=".title" data-clear-btn-id="title-clear-btn" type="text" value="" placeholder="Search by Title" />
+      <input id="input" data-jplist-control="textbox-filter" data-group="data-group-1" data-path=".title" data-clear-btn-id="title-clear-btn" type="text" value="" placeholder="Search by Speaker" />
       <button type="button" id="title-clear-btn">Clear</button>
       </div>
     </div> 
@@ -166,7 +166,8 @@ layout: default
     {% endif %};" data-jplist-item >
       <a href="{{item.url}}" class="glink" style="color: initial;">
         <div class="name" style="padding: 13px;"><strong style="font-size: 18px;">{{item.title_prefix}}</strong>
-          <br />{{item.title}}</div>
+          <br />{{item.title}}
+        </div>
       </a>
       <div class="type" style="display: none;">
         {{item.type}}
