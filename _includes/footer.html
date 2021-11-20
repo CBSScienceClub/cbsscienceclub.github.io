@@ -9,11 +9,8 @@
           </div>
           {%- if site.author %}
           <ul class="contact-list" style="padding: 0px;">
-            {% if site.author.name -%}
             <li class="p-name">{{ site.author.name | escape }}</li>
-            {% endif -%} {% if site.author.email -%}
             <li><a class="u-email" href="mailto:{{ site.author.email }}" target="_blank">{{ site.author.email }}</a></li>
-            {%- endif %}
           </ul>
           {%- endif %}
           <p style="color: $text-color;">
@@ -28,7 +25,7 @@
           <br>
           <a href="/events">Events</a>
           <br>
-          <h6 style="color:$text-color; margin-top: 10px ;">Built using Jekyll, Github Pages and Bootstrap. Find the source code <a href="https://github.com/CBSScienceClub/cbsscienceclub.github.io" target="_blank">here</a>.</h6>
+          <h6 style="color:$text-color; margin-top: 10px ;">Built using Jekyll, Github Pages and Bootstrap. Find our <a href="https://github.com/CBSScienceClub/cbsscienceclub.github.io" rel="noopener" target="_blank">source code</a>.</h6>
           
           <br>
         </div>
