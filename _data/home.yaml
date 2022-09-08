@@ -5,20 +5,20 @@ banner:
 upcoming:
   - active: false
     iframeactive: true
-recent_eventno: 2
+recent_eventno: 3
 zero:
  iframe: 
  t1: 
  t2: 
-one:
+two:
  iframe: PMJtv_B2jKc
  t1: "How to Get Away With Fission: <br> The Tale of Mitochondrial Division and Partitioning"
  t2: "Rendezvous with Dr. Vaishnavi Ananthanarayanan <br>EMBL Australia Group Leader, <br> Single Molecule Science, School of Medical Science,<br> University of New South Wales, Sydney "
-two:
+three:
  iframe: kDhMHFHNjjk
  t1: "My Random Walk in Science: <br> Nano Heat Engines, Earthquakes and Machine Learning"
  t2: " Rendezvous with Prof. Ajay K. Sood <br>Honorary Professor, Department of Physics,<br> IISc, Bengaluru "
-three:
- iframe: 
- t1: 
- t2: 
+one:
+ iframe: -oNnpyeYAlI
+ t1: Science and Independence
+ t2: "Diversity and Inclusion in Science: Panel Discussion with Dr. Abhijit Majumder, IITB,<br> Dr. K.Indira Priyadarsini, CEBS,<br> Dr. Swagata Sarkar, CEBS, <br> and Prof. Vidita Vaidya, TIFR."
