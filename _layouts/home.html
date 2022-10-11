@@ -18,18 +18,21 @@ layout: default
   <div class="container-fluid">
     <div class="row">
       <div class="display-6 m-0 py-0 px-3">
-      <h3 style=" font-size: 0.9em; font-weight: 500;">Upcoming session</h3>
+      <h2 style=" font-size: 0.9em; font-weight: 500;">Upcoming session</h2>
       </div>
       <div class="col-md p-3" style="min-height: 300px;">
         {%if item.iframeactive == true %}
           <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{{ site.data.home.zero.iframe }}?modestbranding=1" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen style="float: left;"></iframe>
         {% endif %}
+        {%if item.poster == true %}
+<img src="/assets/img/poster.jpg" class="d-block mx-auto mt-4" style="max-height: 600px;" alt="...">
+        {% endif %}
       </div>
       <div class="col-md p-3">
         <div>
           <h3 style="margin-bottom: 10px; font-weight: 500;">{{ site.data.home.zero.t1 }}</h3>
-          <h5> {{ site.data.home.zero.t2 }} </h5>
+          <h5 style="text-align: justify;"> {{ site.data.home.zero.t2 }} </h5>
         </div>
       </div>
     </div>

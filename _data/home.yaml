@@ -1,15 +1,19 @@
 
 banner:
   - active: true
-    text: "Check out our new blog post  "
+    text: "Check out our blog post"
 upcoming:
-  - active: false
-    iframeactive: true
+  - active: true
+    iframeactive: false
+    poster: true
 recent_eventno: 3
 zero:
  iframe: 
- t1: 
- t2: 
+ t1: "Telecast: Turned on by danger"
+ t2: "'Turned on by Danger' recounts the journey of Dr. Polly Matzinger, from working as a bartender, carpenter, jazz musician, dog trainer and playboy bunny, to becoming a well known persona in the field of Immunology. The documentary sketches a nice purview of how she establishes 'the danger model' about how the immune system works. The model triggers an uproar as it questions the existing foundations on which the field stands. Her relentless pursuit towards understanding and uncovering new perspectives in science despite constant backlash from her peers, which is enhanced due to her unusual background and approach towards her career makes the story all the way more thought-provoking.<br>
+To know more about Polly Matzinger and her work, please visit:<br>
+<a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7371501'>Legends of Allergy/Immunology</a><br>
+<a href='https://www.niaid.nih.gov/research/polly-matzinger-phd'>Polly Matzinger, NIH<a>"
 two:
  iframe: PMJtv_B2jKc
  t1: "How to Get Away With Fission: <br> The Tale of Mitochondrial Division and Partitioning"
