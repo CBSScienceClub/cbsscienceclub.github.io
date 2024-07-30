@@ -2,229 +2,209 @@
 layout: default
 ---
 
-<style media="screen">
-    .glink,
-    .glink:visited,
-    .glink:hover,
-    .glink:active {
-      text-decoration: none;
-    }
-  
-    @media only screen and (min-width: 960px) {
-      .grid_container {
-        display: grid;
-        grid-gap: 12px;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 10px;
-      }
-      .grid_item {
-        border-radius: 8px;
-        font-size: 16px;
-        text-align: left;
-        border: black solid 1px;
-        transition-duration: 0.3s;
-      }
-    }
-  
-    @media only screen and (max-width: 960px) and (min-width: 680px) {
-      .grid_container {
-        display: grid;
-        grid-gap: 12px;
-        grid-template-columns: 1fr 1fr;
-        padding: 10px;
-      }
-      .grid_item {
-        border-radius: 8px;
-        padding: 13px;
-        font-size: 16px;
-        text-align: left;
-        border: black solid 1px;
-        transition-duration: 0.3s;
-      }
-    }
-  
-    @media only screen and (max-width: 680px) {
-      .grid_container {
-        display: grid;
-        grid-gap: 12px;
-        grid-template-columns: 1fr;
-        padding: 3px;
-      }
-      .grid_item {
-        border-radius: 8px;
-        padding: 13px;
-        font-size: 16px;
-        text-align: left;
-        border: black solid 1px;
-        transition-duration: 0.3s;
-      }
-    }
-    .grid_item:hover{
-      background-color: rgba(117, 234, 241, 0.3);
-      border: rgb(117, 234, 241) solid 1px;
-    }
-  
-    button {
-      background-color: #ffffff;
-      height: 45px;
-      border: solid black 0.5px;
-      color: black;
-      padding: 10px 12px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      border-radius: 4px;
-      transition-duration: 0.5s;
-    }
-  
-    button:hover {
-      background-color: RGBA(133, 227, 255, 0.4);
-  
-    }
-  
-    #page_control {
-      justify-content: center;
-      width: 100%;
-      height: 58px;
-      display: flex;
-      float: right;
-    }
-  
-    #input {
-      width: 70%;
-      height: 45px;
-      padding-left: 10px;
-      margin: 4px;
-      border: 1px solid #010101;
-      border-radius: 4px;
-      resize: vertical;
-    }
-  
-    .controls {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 5px;
-      margin: 1px;
-    }
-  </style>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" /> 
+<link rel="stylesheet" href="/assets/css/pagination.css" />
+
+<script src="/assets/js/jquery-3.7.1.min.js"></script>
+<script src="/assets/js/pagination.min.js"></script>
+
+<script src="/assets/js/fuzzysort.min.js"></script>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md">
       <h1 class="page-heading">{{ page.title }}</h1>
+    </div>
+    <div class="col-md">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search"
+          id="search_in"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            style="margin: 0px"
+            onclick="document.getElementById('search_in').value = ''; refresh_pagination()"
+          >
+            Clear
+          </button>
+        </div>
       </div>
-      <div class="col-md align-items-center p-0">
-      <input id="input" data-jplist-control="textbox-filter" data-group="data-group-1" data-path=".title" data-clear-btn-id="title-clear-btn" type="text" value="" placeholder="Search by Speaker" />
-      <button type="button" id="title-clear-btn">Clear</button>
-      </div>
-    </div> 
+    </div>
   </div>
-  <div class="controls">
-  
-    <div>
-    <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="0" data-selected="true">
-      All
-    </button>
-    <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="0" data-to="2">
-      Rendezvous
-    </button>
-    <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="2" data-to="4">
-      Open Mic
-    </button>
-    <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="4" data-to="6">
+</div>
+
+<div class="controls">
+  <div>
+    <button onclick="toggle_filter(this, 'rendezvous')">Rendezvous</button>
+    <button onclick="toggle_filter(this, 'openmic')">Open Mic</button>
+    <button onclick="toggle_filter(this, 'interaction')">
       Interaction session
     </button>
-    <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="6" data-to="8">
-      Counselling
-    </button>
-    <button data-jplist-control="buttons-range-filter" data-path=".type" data-group="data-group-1" data-name="name1" data-from="8" data-to="10">
-      Other
-    </button>
-    </div>
+    <button onclick="toggle_filter(this, 'counselling')">Counselling</button>
+    <button onclick="toggle_filter(this, 'other')">Other</button>
   </div>
-  <!-- generated content -->
-  <div class="grid_container" data-jplist-group="data-group-1">
-    {%- for item in site.events reversed -%}
-    <div class="grid_item" style="
-    {% if item.type==1 %}
-    background-color: rgba(241, 117, 200, 0.2)
-    {% elsif item.type==3 %}
-    background-color: rgba(241, 231, 86, 0.2)
-    {% elsif item.type==5 %}
-    background-color: rgba(86, 241, 120, 0.2)
-    {% elsif item.type==7 %}
-    background-color: rgba(241, 161, 86, 0.2)
-    {% elsif item.type==9 %}
-    background-color: rgba(109, 86, 241, 0.2)
-    {% endif %};" data-jplist-item >
-      <a href="{{item.url}}" class="glink" style="color: initial;">
-        <div class="name" style="padding: 13px;"><strong style="font-size: 18px;">{{item.title_prefix}}</strong>
-          <br />{{item.title}}
-        </div>
-      </a>
-      <div class="type" style="display: none;">
-        {{item.type}}
-      </div>
-      <div class="title" style="display: none;">
-        {{item.title}}
-      </div>
-    </div>
-    {%- endfor -%}
-    <!-- no results control -->
-    <div data-jplist-control="no-results" data-group="data-group-1" data-name="no-results">
-      No Results Found
-    </div>
-  </div>
-  <div class="controls1">
-    <div data-jplist-control="pagination" data-group="data-group-1" data-items-per-page="9" data-current-page="0" data-name="pagination1">
-      <div id="page_control">
-        <button type="button" data-type="first">«</button>
-        <button type="button" data-type="prev">‹</button>
-        <div class="jplist-holder" data-type="pages">
-          <button type="button" data-type="page">{pageNumber}</button>
-        </div>
-        <button type="button" data-type="next">›</button>
-        <button type="button" data-type="last">»</button>
-        <!-- items per page select -->
-      </div>
-      <div style="text-align: center; font-size: 14px; margin: none; padding: none;">
-        <select data-type="items-per-page" style="width: 150px; height: 40px; padding-left: 10px; margin: 4px;">
-          <option value="9"> 9 per page </option>
-          <option value="15"> 15 per page </option>
-          <option value="45"> 45 per page </option>
-          <option value="0"> view all </option>
-        </select>
-        <br>
-        <span data-type="info">
-          Page {pageNumber} of {pagesNumber} |
-        </span>
-        <span data-type="info">
-          {startItem} - {endItem} of {itemsNumber}
-        </span>
-      </div>
-    </div>
-  </div>
+</div>
 
-  <div class="mt-3">
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-      <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-      </symbol>
+<div class="grid_container" id="event_grid"></div>
+<div id="paging_controls" style="justify-content: center; display: flex"></div>
+
+<script>
+  let event_grid = document.getElementById("event_grid");
+
+
+  // TODO: Make sure it is mentioned that if there is any quote character " in event url, type, title_prefix or title it will break!
+  let raw_data = [];
+  {%- for item in site.events reversed -%}
+  raw_data.push({
+      url: "{{item.url}}",
+      type: "{{item.type}}",
+      title_prefix: "{{item.title_prefix}}",
+      title: "{{item.title}}",
+      written_1: `{{item.written_1}}`,
+      written_2: `{{item.written_2}}`
+  });   
+  {%- endfor -%} // Data from the event entries.
+
+  let current_filter = ["all"]; // Tag filter for the event page.
+
+  // Helper function that toggles a tag
+  function toggle_filter(el, filter) {
+      if (current_filter.indexOf(filter) == -1) {
+          el.classList.add("btn-secondary");
+          if (current_filter.indexOf("all") != -1) current_filter.splice(current_filter.indexOf("all"), 1);
+          current_filter.push(filter);
+          refresh_pagination();
+      } else {
+          el.classList.remove("btn-secondary");
+          current_filter.splice(current_filter.indexOf(filter), 1);
+
+          if (current_filter.length == 0) {
+              current_filter.push("all");
+          }
+          refresh_pagination();
+      }
+  }
+
+  // Helper function for pagination that uses the current filter to fuzzysort the events.
+  function filter_data(done) {
+      let result = [];
+
+      let search_str = document.getElementById("search_in").value.trim().toLowerCase();
+
+      for (let item of raw_data) {
+          if (current_filter.indexOf(item.type) != -1 || current_filter.indexOf("all") != -1) {
+              result.push(item);
+          }
+      }
+
+      search_res = fuzzysort.go(search_str, result, {threshold: 0.3, all: true, keys: ['title', 'written_1', 'written_2']});
+
+      let sorted = [];
+
+      for (let item of search_res) {
+          let obj = {...item.obj};
+
+          obj.title = item[0].highlight("<mark>", "</mark>") || obj.title;
+
+          sorted.push(obj);
+      }
+
+      done(sorted);
+  }
+
+  let current_page_size = 9;
+
+  
+  function refresh_pagination() {
+
+
+      $('#paging_controls').pagination({
+          dataSource: filter_data,
+          className: "paginationjs-big",
+          pageSize: current_page_size,
+          showSizeChanger: true,
+          sizeChangerOptions: [9, 15, 45],
+          afterSizeSelectorChange: function(_, f) {
+
+              current_page_size = f;
+          },
+          callback: function(data, pagination) {
+              // template method of yourself
+              let event_grid = document.getElementById("event_grid");
+
+              let children = [];
+
+              for (let item of data) {
+                  let div = document.createElement("div");
+                  if (item.type == "rendezvous") div.style.backgroundColor = "rgba(241, 117, 200, 0.2)";
+                  else if (item.type == "openmic") div.style.backgroundColor = "rgba(255, 80, 80, 0.2)";
+                  else if (item.type == "interaction") div.style.backgroundColor = "rgba(86, 241, 120, 0.2)";
+                  else if (item.type == "counselling") div.style.backgroundColor = "rgba(241, 161, 86, 0.2)";
+                  else if (item.type == "other") div.style.backgroundColor = "rgba(109, 86, 241, 0.2)";
+
+                  div.classList.add("grid_item");
+
+                  let content = document.createElement("a");
+                  content.href = item.url;
+                  content.classList.add("glink");
+                  content.style.color = "initial";
+
+                  let content_content = document.createElement("div");
+                  content_content.classList.add("name");
+                  content_content.style.padding = "13px";
+
+                  let str = document.createElement("strong");
+                  str.style.fontSize = "18px";
+                  str.textContent = item.title_prefix;
+
+                  content_content.appendChild(str);
+                  content_content.appendChild(document.createElement("br"));
+                  content_content.insertAdjacentHTML("beforeend",item.title);
+
+                  content.appendChild(content_content);
+
+                  div.appendChild(content);
+
+                  children.push(div);
+              }
+
+
+              event_grid.replaceChildren(...children);
+          }
+      });
+  }
+
+  refresh_pagination();
+
+  document.getElementById("search_in").addEventListener("input", refresh_pagination);
+  document.getElementById("search_in").addEventListener("propertychange", refresh_pagination);
+</script>
+
+<div class="mt-3">
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+      <path
+        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
+      />
+    </symbol>
+  </svg>
+  <div class="alert alert-primary d-flex align-items-center" role="alert">
+    <svg
+      class="bi flex-shrink-0 me-2"
+      width="24"
+      height="24"
+      role="img"
+      aria-label="Info:"
+    >
+      <use xlink:href="#info-fill" />
     </svg>
-    <div class="alert alert-primary d-flex align-items-center" role="alert">
-      <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
-      <div>
-        This page is currently being updated to include our earlier sessions!
-      </div>
+    <div>
+      This page is currently being updated to include our earlier sessions!
     </div>
   </div>
-
-  
-  <script src="/assets/scripts/jplist.min.js"></script>
-  <script>
-    jplist.init();
-  </script>
-  
+</div>
